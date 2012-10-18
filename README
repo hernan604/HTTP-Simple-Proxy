@@ -1,0 +1,5 @@
+Very simple proxy with perl
+
+This proxy is a quick hack and is not complete.
+
+As of now, it works for standard http connections
