@@ -26,7 +26,7 @@ sub process_request {
         push @$lines, $line;
         if ( length $line == 0 || !defined $line) {
             my $req = HTTP::Request->new( );
-            my $obj = HTTP::Request->parse( join( '', @$lines ) );
+            my $obj = HTTP::Request->parse( join( ' ', @$lines ) );
             my $response = $ua->request( $obj );
             if ( $response->is_success || $response->is_redirect ) {
               print $response->protocol." ".$response->code." ".$response->message; # EX. HTTP/1.1 200 OK
